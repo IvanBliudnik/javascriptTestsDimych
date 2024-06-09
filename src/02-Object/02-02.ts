@@ -14,7 +14,7 @@ export type HouseType = {
 }
 
 export type governmentBuildingsType = {
-    type: "HOSPITAL" | "FIRE-STATION",
+    type: "HOSPITAL" | "FIRE-STATION", //можно сделать так если знаем что придёт в props
     budget: number,
     staffCount: number,
     address: AdressType, //потому что по свойствам подходит по запросу
