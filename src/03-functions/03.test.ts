@@ -1,4 +1,5 @@
 import {addSkill, changeStudentLive, makeStudentActive} from "./03";
+import {StudentType} from "../02-Object/02";
 
 
 let student: StudentType;
