@@ -1,7 +1,7 @@
 import {CityType} from "./02-02";
 
 
-let city: CityType;
+export let city: CityType;
 
 beforeEach(() => {
     city = {
