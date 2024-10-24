@@ -19,10 +19,17 @@ export const User = () => {
     const saveUser = () => {
         alert("user saved successfully")
     }
-
+    const onNameChanged = () => {
+        console.log("name changed")
+    }
+    const focusLostHandler = () => {
+        console.log("focus lost")
+    }
         return <div>
-            <div>Dimych</div>
+            <textarea onChange={onNameChanged} onBlur={focusLostHandler}>Dimych</textarea>
+            <input/>
             <button onClick={deleteUser}>Delete User</button>
-            <button onClick={saveUser}>Save User</button>
+            <div onClick={saveUser}>Save User</div>
+        {/*    div тоже сработает на события*/}
         </div>
     }
