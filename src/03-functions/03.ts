@@ -4,6 +4,8 @@
 // const res = sum(sum(1,2), sum(1,3))
 
 import {CityType, governmentBuildingsType, HouseType} from "../02-Object/02-02";
+import {student, StudentType} from "../02-Object/02";
+
 
 export const addSkill = (student: StudentType, skill: string) => {
     student.technologies.push({

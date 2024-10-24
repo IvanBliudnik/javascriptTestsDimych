@@ -1,11 +1,11 @@
-//
+
 // export const sum = (a:number,b:number) => {
 //     return a + b
 // }
 // export function sum(a:number,b:number) {
 //     return a + b
 // }
-//одно и тоже
+// одно и тоже
 // const res = sum( sum(1,2), sum(1,3)) //7
 
 
