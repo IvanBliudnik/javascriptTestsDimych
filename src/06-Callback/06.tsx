@@ -14,8 +14,8 @@ import React, {ChangeEvent, MouseEvent} from "react";
 // window.setTimeout(callback, 1000)
 //3
 export const User = () => {
-    const deleteUser = (e:MouseEvent<HTMLButtonElement>) => {
-        e.currentTarget.name
+    const deleteUser = (event:MouseEvent<HTMLButtonElement>) => {
+        alert(event.currentTarget.name)
         // alert("user deleted successfully")
     }
     const saveUser = () => {
