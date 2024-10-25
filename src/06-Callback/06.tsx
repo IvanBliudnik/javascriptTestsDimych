@@ -1,4 +1,5 @@
-import {HouseType} from "../02-Object/02-02";
+// import {HouseType} from "../02-Object/02-02";
+import React, {ChangeEvent, MouseEvent} from "react";
 //simple callback
 // export const createMessage = (houses: Array<HouseType>) => {
 //     let callbackfn = (h: HouseType) => `Hello guys from ${h.address.street.title}!`
@@ -13,8 +14,9 @@ import {HouseType} from "../02-Object/02-02";
 // window.setTimeout(callback, 1000)
 //3
 export const User = () => {
-    const deleteUser = () => {
-        alert("user deleted successfully")
+    const deleteUser = (e:MouseEvent<HTMLButtonElement>) => {
+        e.currentTarget.name
+        // alert("user deleted successfully")
     }
     const saveUser = () => {
         alert("user saved successfully")
@@ -22,13 +24,16 @@ export const User = () => {
     const onNameChanged = () => {
         console.log("name changed")
     }
+    const onAgeChanged = (e:ChangeEvent<HTMLInputElement>) => {
+        console.log("age changed: " + e.currentTarget.value)
+    }
     const focusLostHandler = () => {
         console.log("focus lost")
     }
         return <div>
             <textarea onChange={onNameChanged} onBlur={focusLostHandler}>Dimych</textarea>
-            <input/>
-            <button onClick={deleteUser}>Delete User</button>
+            <input onChange={onAgeChanged} type={"number"}/>
+            <button onClick={deleteUser} name={"delete"} >Delete User</button>
             <div onClick={saveUser}>Save User</div>
         {/*    div тоже сработает на события*/}
         </div>
